@@ -1,0 +1,236 @@
+<html>
+    <head>
+        <style>
+            * {
+  box-sizing: border-box;
+}
+
+.main-container {
+  min-height: 100vh;
+  background-color: #ecf4f3;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Rubik', sans-serif;
+  font-size: 13px;
+}
+
+.main-container a {
+  text-decoration: none;
+}
+
+.main-container .login-wrapper {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 172px 6px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 172px 6px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 172px 6px rgba(0,0,0,0.2); 
+
+  width: 100%;
+  max-width: 900px;
+  min-height: 520px;
+  display: flex;
+}
+
+/* Estilos del contenedor del formulario */
+.main-container .login-wrapper .form-wrapper {
+  min-width: 45%;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos del header del formulario */
+.main-container .login-wrapper .form-wrapper .form-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  padding: 15px;
+  margin-top: 15px;
+
+  font-weight: 900;
+}
+
+.main-container .login-wrapper .form-wrapper .form-header .fa-arrow-left,
+.main-container .login-wrapper .form-wrapper .form-header .register-link,
+.main-container .login-wrapper .form-wrapper .form-container .forgot-pass {
+  color: #686b72;
+}
+
+/* Estilos del formulario y sus mensajes */
+.main-container .login-wrapper .form-wrapper .form-container {
+  padding: 0px 60px;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .form-messages {
+  text-align: left;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .form-messages h2 {
+  margin-bottom: 15px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .form input {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: #eeeeee;
+  border: none;
+  padding: 10px;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .form input:focus {
+  outline: 2px solid #4694a8;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .form a {
+  display: block;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .form .forgot-pass {
+  text-align: right;
+  font-weight: 900;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .form .login-button {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #4694a8;
+  color: #fff;
+  text-align: center;
+}
+
+/* Separador */
+.main-container .login-wrapper .form-wrapper .form-container .separator {
+  border: 2px solid #e8e9ea;
+  margin-bottom: 35px;
+}
+
+/* Otras opciones de login */
+.main-container .login-wrapper .form-wrapper .form-container .login-options {
+  margin: 20px 20px;
+  text-align: center;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .login-options .login-text {
+  margin-bottom: 15px;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .login-icons {
+  font-size: 20px;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .login-icons .fa-facebook-square,
+.main-container .login-wrapper .form-wrapper .form-container .login-icons .fa-google,
+.main-container .login-wrapper .form-wrapper .form-container .login-icons .fa-twitter {
+  color: #4694a8;
+  padding: 0px 10px;
+}
+
+/* Estilos del lado derecho */
+
+.main-container .image-wrapper {
+  background: url("https://unsplash.com/photos/mq6GbT4E8e8/download?force=true");
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.main-container .image-wrapper .image-message {
+  color: #fff;
+  line-height: 20px;
+
+  padding: 50px 70px 70px 40px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.main-container .image-wrapper .image-message .image-hr-container {
+  margin: 25px 70px;
+}
+
+.main-container .image-wrapper .image-message .image-hr-container .image-hr {
+  border: 1px solid #e8e9ea;
+  min-width: 30px;
+}
+
+.image-message .image-text h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="main-container">
+              <div class="login-wrapper">
+          
+                <!-- Contenido del lado izquierdo -->
+                <section class="form-wrapper">
+          
+                  <!-- Header con links y botón de back -->
+                  <header class="form-header">
+          
+                    <a href="#"><i class="fas fa-arrow-left gray"></i></a>
+          
+                  </header>
+          
+                  <!-- Contenedor del formulario y sus mensajes -->
+                  <div class="form-container">
+          
+                    <!-- Mensaje de login -->
+                    <div class="form-messages">
+                      <h2>Login</h2>
+                      <p>Welcome! Please, fill username and password to sign in into your bank account.</p>
+                    </div>
+          
+                    <!-- Formulario -->
+                    <form action="login.php" method="post" class="form">
+                      <input type="text" name="id" id="id" required autocomplete="off" placeholder="Type your email"/>
+                      <input type="password" name="password" id="password" required autocomplete="off"  placeholder="Type your password">
+                      <input type="submit" name="Login Now" value="Login Now" class="login-button">
+                    </form>
+          
+                    <!-- Separador entre botón y opciones -->
+                    <hr class="separator">
+        
+          
+                  </div>
+          
+                </section>
+          
+                <!-- Contenido del lado derecho -->
+                <section class="image-wrapper">
+          
+                  <div class="image-message">
+          
+                    <div class="image-hr-container">
+                      <hr class="image-hr">
+                    </div>
+          
+                    <div class="image-text">
+                      <h2>Bank in your hand!!</h2>
+                      <p>Use it Securely and make your Way easier!!</p>
+                    </div>
+          
+                  </div>
+          
+                </section>
+              </div>
+            </article>
+          </main>
+    </body>
+</html>
